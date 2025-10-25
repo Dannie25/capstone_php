@@ -1,0 +1,129 @@
+/* Notification Bell Styles */
+.notification-container {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-bell {
+    position: relative;
+    cursor: pointer;
+    font-size: 28px;
+    color: #5b6b46;
+    transition: color 0.3s ease;
+}
+
+.notification-bell:hover {
+    color: #4a5a3a;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+    display: none;
+}
+
+.notification-dropdown {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 380px;
+    max-height: 500px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.notification-header {
+    padding: 15px 20px;
+    background: #5b6b46;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notification-clear {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.notification-clear:hover {
+    opacity: 0.8;
+}
+
+.notification-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.notification-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.notification-item:hover {
+    background: #f8f9fa;
+}
+
+.notification-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-message {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.notification-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #666;
+}
+
+.notification-amount {
+    font-weight: bold;
+    color: #5b6b46;
+}
+
+.notification-empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: #999;
+}
+
+.notification-empty i {
+    font-size: 48px;
+    margin-bottom: 10px;
+    opacity: 0.3;
+}

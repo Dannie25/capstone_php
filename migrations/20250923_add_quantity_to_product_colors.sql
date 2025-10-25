@@ -1,0 +1,1 @@
+ALTER TABLE product_colors ADD COLUMN quantity INT(11) NOT NULL DEFAULT 0;

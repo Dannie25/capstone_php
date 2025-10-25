@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test NEW Badge Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 40px;
+        }
+        
+        .test-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #5b6b46;
+            margin-bottom: 30px;
+        }
+        
+        .product-card {
+            width: 250px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(91, 107, 70, 0.08);
+            margin: 20px;
+            display: inline-block;
+        }
+        
+        .product-image-container {
+            position: relative;
+            padding: 20px;
+            background: #fafafa;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        /* NEW Badge */
+        .new-badge {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            z-index: 5;
+            animation: pulse 2s infinite;
+            border: 2px solid white;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.05);
+                box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+            }
+        }
+        
+        .product-info {
+            padding: 15px;
+        }
+        
+        .product-name {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            color: #e44d26;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .info-box {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 NEW Badge Animation Test</h1>
+        
+        <div class="info-box">
+            <strong>Test Purpose:</strong> Verify that the NEW badge appears with pulse animation
+        </div>
+        
+        <h2>Sample Product with NEW Badge:</h2>
+        
+        <div class="product-card">
+            <div class="product-image-container">
+                <!-- NEW Badge -->
+                <div class="new-badge">NEW</div>
+                
+                <!-- Placeholder product image -->
+                <div style="width: 150px; height: 150px; background: #e0e0e0; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
+                    Product Image
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">Sample New Product</div>
+                <div class="product-price">₱999.00</div>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-image-container">
+                <!-- NEW Badge -->
+                <div class="new-badge">NEW</div>
+                
+                <!-- Placeholder product image -->
+                <div style="width: 150px; height: 150px; background: #e0e0e0; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999;">
+                    Product Image
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="product-name">Another New Product</div>
+                <div class="product-price">₱1,299.00</div>
+            </div>
+        </div>
+        
+        <div class="success-box">
+            <strong>✓ What to Check:</strong>
+            <ul style="margin: 10px 0 0 20px;">
+                <li>NEW badge should appear in the center of the image</li>
+                <li>Badge should have a red gradient background</li>
+                <li>Badge should pulse (grow and shrink) continuously</li>
+                <li>Badge should have a white border</li>
+                <li>Badge should have a glowing shadow effect</li>
+            </ul>
+        </div>
+        
+        <h2>Animation Details:</h2>
+        <ul>
+            <li><strong>Animation Name:</strong> pulse</li>
+            <li><strong>Duration:</strong> 2 seconds</li>
+            <li><strong>Repeat:</strong> Infinite</li>
+            <li><strong>Effect:</strong> Scale from 1.0 to 1.05 and back</li>
+            <li><strong>Shadow:</strong> Grows from 15px to 20px blur</li>
+        </ul>
+        
+        <div class="info-box">
+            <strong>If animation is not working:</strong>
+            <ol style="margin: 10px 0 0 20px;">
+                <li>Check browser console for CSS errors</li>
+                <li>Try hard refresh (Ctrl + Shift + R)</li>
+                <li>Verify @keyframes is loading</li>
+                <li>Check if browser supports CSS animations</li>
+            </ol>
+        </div>
+        
+        <p style="margin-top: 30px;">
+            <a href="products.php" style="color: #5b6b46; font-weight: 600;">← Back to Products</a>
+        </p>
+    </div>
+</body>
+</html>
